@@ -29,7 +29,9 @@ namespace NLogApp
                     runner.DoAction("Action1");
 
                     string message = "Press any key to exit";
+#pragma warning disable CA1303 // Do not pass literals as localized parameters
                     Console.WriteLine(message);
+#pragma warning restore CA1303 // Do not pass literals as localized parameters
                     Console.ReadKey();
                 }
             }

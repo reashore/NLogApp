@@ -14,7 +14,9 @@ namespace NLogApp
         public void DoAction(string name)
         {
             const string message = "Doing hard work! {Action}";
+#pragma warning disable CA1303 // Do not pass literals as localized parameters
             _logger.LogDebug(20, message, name);
+#pragma warning restore CA1303 // Do not pass literals as localized parameters
         }
     }
 }
